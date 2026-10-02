@@ -1,0 +1,627 @@
+[
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/auth/login",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "http://localhost:4200/login",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "application/json"
+    },
+    "responseHeaders": {
+      "etag": "W/\"155-YDi6Qm32Nr2Beq1RfLqKxVEYr9Q\"",
+      "access-control-allow-origin": "*",
+      "content-length": "341",
+      "date": "Tue, 22 Sep 2026 18:15:11 GMT, Tue, 22 Sep 2026 18:15:11 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "bodyNote": "{\"email\":\"demo@example.com\",\"password\":\"Demo1234!\"}",
+    "responsePreview": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI\",\"user\":{\"id\":\"6aaa59d7006877d9145a702d\",\"name\":\"Demo\",\"email\":\"demo@example.com\",\"createdAt\":\"2026-09-16T08:56:55.840Z\"}}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"33-kaS7pZy0+06XjTriaWHPHd9SopQ\"",
+      "access-control-allow-origin": "*",
+      "content-length": "51",
+      "date": "Tue, 22 Sep 2026 18:15:11 GMT, Tue, 22 Sep 2026 18:15:11 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[],\"page\":1,\"limit\":5,\"total\":0,\"pages\":1}"
+  },
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/tracks",
+    "status": 201,
+    "statusText": "Created",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundary5bTYDZPJXKRlHI6O"
+    },
+    "responseHeaders": {
+      "etag": "W/\"de-cYpeIvAx9wsmghJk/zOIEsKkllk\"",
+      "access-control-allow-origin": "*",
+      "content-length": "222",
+      "date": "Tue, 22 Sep 2026 18:15:42 GMT, Tue, 22 Sep 2026 18:15:42 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"id\":\"6ab2c5ce8e3ddeb8913070d2\",\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Improvisation longue (13 Mo)\",\"originalName\":\"piste-longue.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":14421348,\"createdAt\":\"2026-09-22T18:15:42.813Z\"}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"140-jFxzCQF/h7PcLsz91x+x1YnqSe4\"",
+      "access-control-allow-origin": "*",
+      "content-length": "320",
+      "date": "Tue, 22 Sep 2026 18:15:42 GMT, Tue, 22 Sep 2026 18:15:42 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Improvisation longue (13 Mo)\",\"originalName\":\"piste-longue.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":14421348,\"createdAt\":\"2026-09-22T18:15:42.813Z\",\"updatedAt\":\"2026-09-22T18:15:42.813Z\",\"__v\":0,\"id\":\"6ab2c5ce8e3ddeb8913070d2\"}],\"page\":1,\"limit\":5,\"total\":1,\"pages\":1}"
+  },
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/tracks",
+    "status": 201,
+    "statusText": "Created",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundary2fdjcBDriMoeRnZx"
+    },
+    "responseHeaders": {
+      "etag": "W/\"d2-hJaEJ/zPuMoL9wHloRxmCnZZScc\"",
+      "access-control-allow-origin": "*",
+      "content-length": "210",
+      "date": "Tue, 22 Sep 2026 18:15:44 GMT, Tue, 22 Sep 2026 18:15:44 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"id\":\"6ab2c5d08e3ddeb8913070d3\",\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 2\",\"originalName\":\"petit-extrait.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":60000,\"createdAt\":\"2026-09-22T18:15:44.553Z\"}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"242-a6A7V3imiwrSdVqx3kLv/BZw/JI\"",
+      "access-control-allow-origin": "*",
+      "content-length": "578",
+      "date": "Tue, 22 Sep 2026 18:15:44 GMT, Tue, 22 Sep 2026 18:15:44 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 2\",\"originalName\":\"petit-extrait.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":60000,\"createdAt\":\"2026-09-22T18:15:44.553Z\",\"updatedAt\":\"2026-09-22T18:15:44.553Z\",\"__v\":0,\"id\":\"6ab2c5d08e3ddeb8913070d3\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Improvisation longue (13 Mo)\",\"originalName\":\"piste-longue.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":14421348,\"createdAt\":\"2026-09-22T18:15:42.813Z\",\"updatedAt\":\"2026-09-22T18:15:42.813Z\",\"__v\":0,\"id\":\"6ab2c5ce8e3ddeb8913070d2\"}],\"page\":1,\"limit\":5,\"total\":2,\"pages\":1}"
+  },
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/tracks",
+    "status": 201,
+    "statusText": "Created",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryxXovmNaAs1mkrHyz"
+    },
+    "responseHeaders": {
+      "etag": "W/\"d3-0tB6qtmIzdd+LGc3VWYZaECQDaE\"",
+      "access-control-allow-origin": "*",
+      "content-length": "211",
+      "date": "Tue, 22 Sep 2026 18:15:50 GMT, Tue, 22 Sep 2026 18:15:50 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"id\":\"6ab2c5d68e3ddeb8913070d4\",\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 3\",\"originalName\":\"piste-demo-3.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:50.439Z\"}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"345-vc1x+1MgheuKx/Ax/7pgQMZ+9hI\"",
+      "access-control-allow-origin": "*",
+      "content-length": "837",
+      "date": "Tue, 22 Sep 2026 18:15:50 GMT, Tue, 22 Sep 2026 18:15:50 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 3\",\"originalName\":\"piste-demo-3.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:50.439Z\",\"updatedAt\":\"2026-09-22T18:15:50.439Z\",\"__v\":0,\"id\":\"6ab2c5d68e3ddeb8913070d4\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 2\",\"originalName\":\"petit-extrait.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":60000,\"createdAt\":\"2026-09-22T18:15:44.553Z\",\"updatedAt\":\"2026-09-22T18:15:44.553Z\",\"__v\":0,\"id\":\"6ab2c5d08e3ddeb8913070d3\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Improvisation longue (13 Mo)\",\"originalName\":\"piste-longue.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":14421348,\"createdAt\":\"2026-09-22T18:15:42.813Z\",\"updatedAt\":\"2026-09-22T18:15:42.813Z\",\"__v\":0,\"id\":\"6ab2c5ce8e3ddeb8913070d2\"}],\"page\":1,\"limit\":5,\"total\":3,\"pages\":1}"
+  },
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/tracks",
+    "status": 201,
+    "statusText": "Created",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryMctsU6B8875oq0A0"
+    },
+    "responseHeaders": {
+      "etag": "W/\"d3-LF6Rkh+1K1FQXWdCvRX0Mj1jV1M\"",
+      "access-control-allow-origin": "*",
+      "content-length": "211",
+      "date": "Tue, 22 Sep 2026 18:15:56 GMT, Tue, 22 Sep 2026 18:15:56 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"id\":\"6ab2c5dc8e3ddeb8913070d5\",\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:56.353Z\"}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"448-/X7Hz6qyW2STXZh1b7aRozke7Ho\"",
+      "access-control-allow-origin": "*",
+      "content-length": "1096",
+      "date": "Tue, 22 Sep 2026 18:15:56 GMT, Tue, 22 Sep 2026 18:15:56 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:56.353Z\",\"updatedAt\":\"2026-09-22T18:15:56.353Z\",\"__v\":0,\"id\":\"6ab2c5dc8e3ddeb8913070d5\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 3\",\"originalName\":\"piste-demo-3.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:50.439Z\",\"updatedAt\":\"2026-09-22T18:15:50.439Z\",\"__v\":0,\"id\":\"6ab2c5d68e3ddeb8913070d4\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 2\",\"originalName\":\"petit-extrait.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":60000,\"createdAt\":\"2026-09-22T18:15:44.553Z\",\"updatedAt\":\"2026-09-22T18:15:44.553Z\",\"__v\":0,\"id\":\"6ab2c5d08e3ddeb8913070d3\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Improvisation longue (13 Mo)\",\"originalName\":\"piste-longue.mp3\",\"mi"
+  },
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/tracks",
+    "status": 201,
+    "statusText": "Created",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryEXqh6UP8IySJcygh"
+    },
+    "responseHeaders": {
+      "etag": "W/\"d3-8/XqFET+nQbdKbe5dBEyL1o72ts\"",
+      "access-control-allow-origin": "*",
+      "content-length": "211",
+      "date": "Tue, 22 Sep 2026 18:16:02 GMT, Tue, 22 Sep 2026 18:16:02 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"id\":\"6ab2c5e28e3ddeb8913070d6\",\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 5\",\"originalName\":\"piste-demo-5.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:02.395Z\"}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"54b-5VO5vG+T4JyQC44YgOGcQ0gKako\"",
+      "access-control-allow-origin": "*",
+      "content-length": "1355",
+      "date": "Tue, 22 Sep 2026 18:16:02 GMT, Tue, 22 Sep 2026 18:16:02 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 5\",\"originalName\":\"piste-demo-5.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:02.395Z\",\"updatedAt\":\"2026-09-22T18:16:02.395Z\",\"__v\":0,\"id\":\"6ab2c5e28e3ddeb8913070d6\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:56.353Z\",\"updatedAt\":\"2026-09-22T18:15:56.353Z\",\"__v\":0,\"id\":\"6ab2c5dc8e3ddeb8913070d5\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 3\",\"originalName\":\"piste-demo-3.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:50.439Z\",\"updatedAt\":\"2026-09-22T18:15:50.439Z\",\"__v\":0,\"id\":\"6ab2c5d68e3ddeb8913070d4\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 2\",\"originalName\":\"petit-extrait.mp3\",\"mimeType\":"
+  },
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/tracks",
+    "status": 201,
+    "statusText": "Created",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarydMLck4UZU5u25JbQ"
+    },
+    "responseHeaders": {
+      "etag": "W/\"c9-ZqIx1GAolLWcPXYdFQiWk8cQtos\"",
+      "access-control-allow-origin": "*",
+      "content-length": "201",
+      "date": "Tue, 22 Sep 2026 18:16:08 GMT, Tue, 22 Sep 2026 18:16:08 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"id\":\"6ab2c5e88e3ddeb8913070d7\",\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 7\",\"originalName\":\"song1.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:08.344Z\"}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"536-iMM7v/AmX512yBvibDmeCir5I5E\"",
+      "access-control-allow-origin": "*",
+      "content-length": "1334",
+      "date": "Tue, 22 Sep 2026 18:16:08 GMT, Tue, 22 Sep 2026 18:16:08 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 7\",\"originalName\":\"song1.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:08.344Z\",\"updatedAt\":\"2026-09-22T18:16:08.344Z\",\"__v\":0,\"id\":\"6ab2c5e88e3ddeb8913070d7\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 5\",\"originalName\":\"piste-demo-5.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:02.395Z\",\"updatedAt\":\"2026-09-22T18:16:02.395Z\",\"__v\":0,\"id\":\"6ab2c5e28e3ddeb8913070d6\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:56.353Z\",\"updatedAt\":\"2026-09-22T18:15:56.353Z\",\"__v\":0,\"id\":\"6ab2c5dc8e3ddeb8913070d5\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 3\",\"originalName\":\"piste-demo-3.mp3\",\"mimeType\":\"audio/mpeg"
+  },
+  {
+    "origin": "playwright",
+    "method": "POST",
+    "url": "http://localhost:4200/api/tracks",
+    "status": 201,
+    "statusText": "Created",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryzPU73C9hIBCMWspF"
+    },
+    "responseHeaders": {
+      "etag": "W/\"c9-R/TsgkOccllyWsV3/tFmjAMu2RA\"",
+      "access-control-allow-origin": "*",
+      "content-length": "201",
+      "date": "Tue, 22 Sep 2026 18:16:23 GMT, Tue, 22 Sep 2026 18:16:23 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"id\":\"6ab2c5f78e3ddeb8913070d8\",\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 8\",\"originalName\":\"song2.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":6405141,\"createdAt\":\"2026-09-22T18:16:23.312Z\"}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"52d-iwEsxE/gr6+LrSwsZkxjtIuxJZ0\"",
+      "access-control-allow-origin": "*",
+      "content-length": "1325",
+      "date": "Tue, 22 Sep 2026 18:16:23 GMT, Tue, 22 Sep 2026 18:16:23 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 8\",\"originalName\":\"song2.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":6405141,\"createdAt\":\"2026-09-22T18:16:23.312Z\",\"updatedAt\":\"2026-09-22T18:16:23.312Z\",\"__v\":0,\"id\":\"6ab2c5f78e3ddeb8913070d8\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 7\",\"originalName\":\"song1.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:08.344Z\",\"updatedAt\":\"2026-09-22T18:16:08.344Z\",\"__v\":0,\"id\":\"6ab2c5e88e3ddeb8913070d7\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 5\",\"originalName\":\"piste-demo-5.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:02.395Z\",\"updatedAt\":\"2026-09-22T18:16:02.395Z\",\"__v\":0,\"id\":\"6ab2c5e28e3ddeb8913070d6\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"52d-iwEsxE/gr6+LrSwsZkxjtIuxJZ0\"",
+      "access-control-allow-origin": "*",
+      "content-length": "1325",
+      "date": "Tue, 22 Sep 2026 18:16:25 GMT, Tue, 22 Sep 2026 18:16:25 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 8\",\"originalName\":\"song2.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":6405141,\"createdAt\":\"2026-09-22T18:16:23.312Z\",\"updatedAt\":\"2026-09-22T18:16:23.312Z\",\"__v\":0,\"id\":\"6ab2c5f78e3ddeb8913070d8\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 7\",\"originalName\":\"song1.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:08.344Z\",\"updatedAt\":\"2026-09-22T18:16:08.344Z\",\"__v\":0,\"id\":\"6ab2c5e88e3ddeb8913070d7\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 5\",\"originalName\":\"piste-demo-5.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:02.395Z\",\"updatedAt\":\"2026-09-22T18:16:02.395Z\",\"__v\":0,\"id\":\"6ab2c5e28e3ddeb8913070d6\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=2&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"242-5qDEAg1dSx9+a8A6Ulmaziju5Tc\"",
+      "access-control-allow-origin": "*",
+      "content-length": "578",
+      "date": "Tue, 22 Sep 2026 18:16:26 GMT, Tue, 22 Sep 2026 18:16:26 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 2\",\"originalName\":\"petit-extrait.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":60000,\"createdAt\":\"2026-09-22T18:15:44.553Z\",\"updatedAt\":\"2026-09-22T18:15:44.553Z\",\"__v\":0,\"id\":\"6ab2c5d08e3ddeb8913070d3\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Improvisation longue (13 Mo)\",\"originalName\":\"piste-longue.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":14421348,\"createdAt\":\"2026-09-22T18:15:42.813Z\",\"updatedAt\":\"2026-09-22T18:15:42.813Z\",\"__v\":0,\"id\":\"6ab2c5ce8e3ddeb8913070d2\"}],\"page\":2,\"limit\":5,\"total\":7,\"pages\":2}"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks/6ab2c5d08e3ddeb8913070d3/audio",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=0",
+      "etag": "W/\"ea60-1a0ca54b6a9\"",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "60000",
+      "date": "Tue, 22 Sep 2026 18:16:26 GMT, Tue, 22 Sep 2026 18:16:26 GMT",
+      "content-type": "audio/mpeg",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "last-modified": "Tue, 22 Sep 2026 18:15:44 GMT",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "<binaire audio/mpeg> 60000 octets"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"52d-iwEsxE/gr6+LrSwsZkxjtIuxJZ0\"",
+      "access-control-allow-origin": "*",
+      "content-length": "1325",
+      "date": "Tue, 22 Sep 2026 18:16:26 GMT, Tue, 22 Sep 2026 18:16:26 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 8\",\"originalName\":\"song2.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":6405141,\"createdAt\":\"2026-09-22T18:16:23.312Z\",\"updatedAt\":\"2026-09-22T18:16:23.312Z\",\"__v\":0,\"id\":\"6ab2c5f78e3ddeb8913070d8\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 7\",\"originalName\":\"song1.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:08.344Z\",\"updatedAt\":\"2026-09-22T18:16:08.344Z\",\"__v\":0,\"id\":\"6ab2c5e88e3ddeb8913070d7\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 5\",\"originalName\":\"piste-demo-5.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:02.395Z\",\"updatedAt\":\"2026-09-22T18:16:02.395Z\",\"__v\":0,\"id\":\"6ab2c5e28e3ddeb8913070d6\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3"
+  },
+  {
+    "origin": "playwright",
+    "method": "DELETE",
+    "url": "http://localhost:4200/api/tracks/6ab2c5f78e3ddeb8913070d8",
+    "status": 204,
+    "statusText": "No Content",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "access-control-allow-origin": "*",
+      "content-length": "0",
+      "date": "Tue, 22 Sep 2026 18:16:29 GMT, Tue, 22 Sep 2026 18:16:29 GMT",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "<binaire > 0 octets"
+  },
+  {
+    "origin": "playwright",
+    "method": "GET",
+    "url": "http://localhost:4200/api/tracks?page=1&limit=5",
+    "status": 200,
+    "statusText": "OK",
+    "requestHeaders": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWFhNTlkNzAwNjg3N2Q5MTQ1YTcwMmQiLCJlbWFpbCI6ImRlbW9AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTAxMDA5MTEsImV4cCI6MTc5MDEwODExMX0.WbyvWWCQL9sj3vpZoJZjupmPuMjNcq-r2dWAu7Lq7TI",
+      "referer": "http://localhost:4200/tracks",
+      "accept-language": "fr-FR",
+      "sec-ch-ua": "\"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*"
+    },
+    "responseHeaders": {
+      "etag": "W/\"536-iMM7v/AmX512yBvibDmeCir5I5E\"",
+      "access-control-allow-origin": "*",
+      "content-length": "1334",
+      "date": "Tue, 22 Sep 2026 18:16:29 GMT, Tue, 22 Sep 2026 18:16:29 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "vary": "Origin",
+      "server": "BaseHTTP/0.6 Python/3.11.9",
+      "x-powered-by": "Express"
+    },
+    "responsePreview": "{\"items\":[{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Backing track 7\",\"originalName\":\"song1.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:08.344Z\",\"updatedAt\":\"2026-09-22T18:16:08.344Z\",\"__v\":0,\"id\":\"6ab2c5e88e3ddeb8913070d7\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 5\",\"originalName\":\"piste-demo-5.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:16:02.395Z\",\"updatedAt\":\"2026-09-22T18:16:02.395Z\",\"__v\":0,\"id\":\"6ab2c5e28e3ddeb8913070d6\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 4\",\"originalName\":\"piste-demo-4.mp3\",\"mimeType\":\"audio/mpeg\",\"size\":3605337,\"createdAt\":\"2026-09-22T18:15:56.353Z\",\"updatedAt\":\"2026-09-22T18:15:56.353Z\",\"__v\":0,\"id\":\"6ab2c5dc8e3ddeb8913070d5\"},{\"ownerId\":\"6aaa59d7006877d9145a702d\",\"title\":\"Piste de travail 3\",\"originalName\":\"piste-demo-3.mp3\",\"mimeType\":\"audio/mpeg"
+  }
+]

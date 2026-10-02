@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;font:13px/1.5 'Segoe UI',system-ui,sans-serif;background:#fff;color:#202124}
+.bar{background:#202124;color:#e8eaed;padding:8px 14px;display:flex;gap:26px;font-size:13px}
+.bar b{color:#8ab4f8}
+.tab{display:inline-block;padding:10px 16px;border-bottom:2px solid #1a73e8;font-weight:600;color:#1a73e8}
+.wrap{display:flex}
+.col{padding:16px 20px;flex:1;min-width:0}
+.col+.col{border-left:1px solid #dadce0}
+h3{margin:14px 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:#5f6368}
+table{border-collapse:collapse;width:100%}
+td{padding:5px 8px;vertical-align:top;border-bottom:1px solid #f1f3f4;font-size:12.5px;word-break:break-all}
+td:first-child{color:#5f6368;white-space:nowrap;padding-right:18px;font-weight:600}
+pre{background:#f8f9fa;border:1px solid #dadce0;border-radius:6px;padding:10px;margin:0;white-space:pre-wrap;font:12.5px/1.5 'Consolas',monospace;color:#1f2937}
+.url{color:#1a73e8;word-break:break-all;font-weight:600}
+.ok{color:#188038;font-weight:700}.ko{color:#d93025;font-weight:700}
+.method{background:#e8f0fe;color:#1967d2;padding:2px 8px;border-radius:4px;font-weight:700}
+.note{background:#fff8e1;border:1px solid #ffe082;border-radius:6px;padding:8px 10px;margin-top:10px;font-size:12.5px}
+</style></head><body>
+<div class="bar"><b>DevTools — Network</b><span>GET /api/tracks/:id/cover — image derrière le JWT</span></div>
+<div><span class="tab">Headers</span><span class="tab">Payload</span><span class="tab">Response</span></div>
+<div class="wrap">
+  <div class="col">
+    <h3>General</h3>
+    <table><tr><td>Request URL</td><td><span class="url">http://localhost:4200/api/tracks/6abf9d23537845d58c897fbb/cover</span></td></tr><tr><td>Request Method</td><td><span class="method">GET</span></td></tr><tr><td>Status Code</td><td><span class="ok">200 OK</span></td></tr></table>
+    <h3>Request Headers</h3><table><tr><td>accept</td><td>application/json, text/plain, */*</td></tr><tr><td>authorization</td><td>Bearer eyJhbGciOi…(masqué)</td></tr><tr><td>referer</td><td>http://localhost:4200/tracks</td></tr><tr><td>user-agent</td><td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36</td></tr></table>
+    <h3>Request Payload</h3><pre>aucun corps : requête GET</pre>
+  </div>
+  <div class="col">
+    <h3>Response Headers</h3><pre>vary: Origin
+accept-ranges: bytes
+access-control-allow-origin: *
+cache-control: public, max-age=0
+connection: close
+content-length: 101670
+content-type: image/png
+date: Fri, 02 Oct 2026 12:18:51 GMT
+etag: W/&quot;18d26-1a0fc7dd304&quot;
+last-modified: Fri, 02 Oct 2026 12:01:39 GMT
+x-powered-by: Express</pre>
+    <div class="note">La requête porte bien <b>Authorization: Bearer …</b> : c'est ce qui permet à la route protégée de répondre, là où une balise <code>&lt;img src="/api/…"&gt;</code> ne pourrait pas transmettre l'en-tête. Type de contenu renvoyé : <b>image/png</b>.</div>
+  </div>
+</div></body></html>

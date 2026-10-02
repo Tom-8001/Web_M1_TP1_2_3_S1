@@ -1,0 +1,114 @@
+[
+  {
+    "octets": 14421659,
+    "champs": [
+      [
+        "audio",
+        "piste-longue.mp3"
+      ],
+      [
+        "title",
+        ""
+      ]
+    ],
+    "types": [
+      "audio/mpeg"
+    ]
+  },
+  {
+    "octets": 60302,
+    "champs": [
+      [
+        "audio",
+        "petit-extrait.mp3"
+      ],
+      [
+        "title",
+        ""
+      ]
+    ],
+    "types": [
+      "audio/mpeg"
+    ]
+  },
+  {
+    "octets": 3605638,
+    "champs": [
+      [
+        "audio",
+        "piste-demo-3.mp3"
+      ],
+      [
+        "title",
+        ""
+      ]
+    ],
+    "types": [
+      "audio/mpeg"
+    ]
+  },
+  {
+    "octets": 3605638,
+    "champs": [
+      [
+        "audio",
+        "piste-demo-4.mp3"
+      ],
+      [
+        "title",
+        ""
+      ]
+    ],
+    "types": [
+      "audio/mpeg"
+    ]
+  },
+  {
+    "octets": 3605638,
+    "champs": [
+      [
+        "audio",
+        "piste-demo-5.mp3"
+      ],
+      [
+        "title",
+        ""
+      ]
+    ],
+    "types": [
+      "audio/mpeg"
+    ]
+  },
+  {
+    "octets": 3605628,
+    "champs": [
+      [
+        "audio",
+        "song1.mp3"
+      ],
+      [
+        "title",
+        ""
+      ]
+    ],
+    "types": [
+      "audio/mpeg"
+    ]
+  },
+  {
+    "octets": 6405432,
+    "champs": [
+      [
+        "audio",
+        "song2.mp3"
+      ],
+      [
+        "title",
+        ""
+      ]
+    ],
+    "types": [
+      "audio/mpeg"
+    ]
+  }
+]

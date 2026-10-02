@@ -1,4 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../shared/services/auth.service';
@@ -31,8 +32,10 @@ export class LoginPageComponent {
         console.debug('[LoginPage] Connexion réussie');
         void this.router.navigateByUrl('/tracks');
       },
-      error: (error: { error?: { message?: string } }) => {
-        console.error('[LoginPage] Échec de connexion', error);
+      error: (error: HttpErrorResponse) => {
+        // Un mauvais mot de passe est une erreur attendue : on la trace
+        // simplement (statut seul, jamais les identifiants saisis).
+        console.warn('[LoginPage] Connexion refusée', error.status);
         this.error.set(error.error?.message ?? 'Erreur de connexion');
       },
     });

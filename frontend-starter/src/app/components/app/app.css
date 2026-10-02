@@ -1,1 +1,12 @@
 :host { display: block; }
+
+/* Le bouton de déconnexion se présente comme un lien de la barre de navigation. */
+.logout {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}

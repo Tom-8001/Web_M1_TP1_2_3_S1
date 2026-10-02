@@ -1,4 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../shared/services/auth.service';
@@ -27,8 +28,9 @@ export class RegisterPageComponent {
         console.debug('[RegisterPage] Inscription réussie');
         void this.router.navigateByUrl('/profile');
       },
-      error: (error: { error?: { message?: string } }) => {
-        console.error('[RegisterPage] Échec de l’inscription', error);
+      error: (error: HttpErrorResponse) => {
+        // Inscription refusée : on trace le statut seul, sans les données saisies.
+        console.warn('[RegisterPage] Inscription refusée', error.status);
         this.error.set(error.error?.message ?? 'Erreur d’inscription');
       },
     });

@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;font:13px/1.5 'Segoe UI',system-ui,sans-serif;background:#fff;color:#202124}
+.bar{background:#202124;color:#e8eaed;padding:8px 14px;display:flex;gap:26px;font-size:13px}
+.bar b{color:#8ab4f8}
+.tab{display:inline-block;padding:10px 16px;border-bottom:2px solid #1a73e8;font-weight:600;color:#1a73e8}
+.wrap{display:flex}
+.col{padding:16px 20px;flex:1;min-width:0}
+.col+.col{border-left:1px solid #dadce0}
+h3{margin:14px 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:#5f6368}
+table{border-collapse:collapse;width:100%}
+td{padding:5px 8px;vertical-align:top;border-bottom:1px solid #f1f3f4;font-size:12.5px;word-break:break-all}
+td:first-child{color:#5f6368;white-space:nowrap;padding-right:18px;font-weight:600}
+pre{background:#f8f9fa;border:1px solid #dadce0;border-radius:6px;padding:10px;margin:0;white-space:pre-wrap;font:12.5px/1.5 'Consolas',monospace;color:#1f2937}
+.url{color:#1a73e8;word-break:break-all;font-weight:600}
+.ok{color:#188038;font-weight:700}.ko{color:#d93025;font-weight:700}
+.method{background:#e8f0fe;color:#1967d2;padding:2px 8px;border-radius:4px;font-weight:700}
+.note{background:#fff8e1;border:1px solid #ffe082;border-radius:6px;padding:8px 10px;margin-top:10px;font-size:12.5px}
+</style></head><body>
+<div class="bar"><b>DevTools — Network</b><span>GET /api/tracks?q=blues</span></div>
+<div><span class="tab">Headers</span><span class="tab">Payload</span><span class="tab">Response</span></div>
+<div class="wrap">
+  <div class="col">
+    <h3>General</h3>
+    <table><tr><td>Request URL</td><td><span class="url">http://localhost:4200/api/tracks?page=1&amp;limit=5&amp;q=blues</span></td></tr><tr><td>Request Method</td><td><span class="method">GET</span></td></tr><tr><td>Status Code</td><td><span class="ok">200 OK</span></td></tr><tr><td>Query String Parameters</td><td>page=1&amp;limit=5&amp;q=blues</td></tr></table>
+    <h3>Request Headers</h3><table><tr><td>accept</td><td>application/json, text/plain, */*</td></tr><tr><td>accept-language</td><td>fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7</td></tr><tr><td>authorization</td><td>Bearer eyJhbGciOi…(masqué)</td></tr><tr><td>referer</td><td>http://localhost:4200/tracks</td></tr><tr><td>user-agent</td><td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36</td></tr></table>
+    <h3>Query String Parameters</h3><pre>page  = 1
+limit = 5
+q     = &quot;blues&quot;</pre>
+  </div>
+  <div class="col">
+    <h3>Response</h3><pre>{
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;6abf9d23537845d58c897fbb&quot;,
+      &quot;ownerId&quot;: &quot;6aaa59d7006877d9145a702d&quot;,
+      &quot;title&quot;: &quot;Blues en Mi (avec pochette)&quot;,
+      &quot;originalName&quot;: &quot;song1.mp3&quot;,
+      &quot;mimeType&quot;: &quot;audio/mpeg&quot;,
+      &quot;size&quot;: 3605337,
+      &quot;createdAt&quot;: &quot;2026-10-02T12:01:39.589Z&quot;,
+      &quot;hasCover&quot;: true,
+      &quot;coverMimeType&quot;: &quot;image/png&quot;
+    }
+  ],
+  &quot;page&quot;: 1,
+  &quot;limit&quot;: 5,
+  &quot;total&quot;: 1,
+  &quot;pages&quot;: 1,
+  &quot;totalDocs&quot;: 1,
+  &quot;totalPages&quot;: 1,
+  &quot;pagingCounter&quot;: 1,
+  &quot;hasPrevPage&quot;: false,
+  &quot;hasNextPage&quot;: false,
+  &quot;prevPage&quot;: null,
+  &quot;nextPage&quot;: null
+}</pre>
+    <div class="note">Le filtre <b>q</b> est bien transmis au serveur, qui filtre toute la bibliothèque <b>avant</b> de paginer : le total renvoyé ne porte que sur les pistes correspondantes.</div>
+  </div>
+</div></body></html>

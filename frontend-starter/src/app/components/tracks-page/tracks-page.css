@@ -1,0 +1,194 @@
+:host {
+  display: block;
+}
+
+.hint {
+  margin: 0.3rem 0;
+  color: #61756f;
+  font-size: 0.85rem;
+}
+
+.file-info {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #1d755e;
+}
+
+.success {
+  margin: 0.3rem 0;
+  padding: 0.5rem 0.7rem;
+  color: #14523f;
+  background: #e3f5ee;
+  border-left: 4px solid #1d755e;
+  border-radius: 6px;
+}
+
+.error {
+  margin: 0.3rem 0;
+  padding: 0.5rem 0.7rem;
+  color: #7d1d1d;
+  background: #fdecec;
+  border-left: 4px solid #a33;
+  border-radius: 6px;
+}
+
+/* ---------------------------- Bibliothèque ---------------------------- */
+
+.tracks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.track-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #e1ebe7;
+}
+
+.track-card:last-child {
+  border-bottom: 0;
+}
+
+.track-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.track-title {
+  flex: 1 1 auto;
+  font-size: 1.02rem;
+  overflow-wrap: anywhere;
+}
+
+.badge {
+  flex: 0 0 auto;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #123d32;
+  background: #dff0e9;
+  border-radius: 999px;
+}
+
+.track-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.9rem;
+  margin: 0;
+  color: #61756f;
+  font-size: 0.83rem;
+}
+
+.meta-name {
+  overflow-wrap: anywhere;
+}
+
+.track-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.track-actions button {
+  padding: 0.45rem 0.8rem;
+  font-size: 0.88rem;
+}
+
+button.danger {
+  color: #7d1d1d;
+  background: #fbeaea;
+  border: 1px solid #eec9c9;
+}
+
+.confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.empty {
+  padding: 1rem 0;
+  color: #61756f;
+}
+
+/* ------------------------------ Lecteur ------------------------------ */
+
+.player {
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  background: #f3f7f5;
+  border: 1px solid #d8e6e0;
+  border-radius: 10px;
+}
+
+.player audio {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* ----------------------------- Pagination ---------------------------- */
+
+mat-paginator {
+  margin-top: 0.8rem;
+  background: transparent;
+  border-top: 1px solid #e1ebe7;
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
+  color: #61756f;
+}
+
+@media (max-width: 720px) {
+  .track-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
+/* --------------------------- Filtre par titre -------------------------- */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0.7rem 0 0.2rem;
+}
+
+.search input[type='search'] {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  border: 1px solid #cfded9;
+  border-radius: 8px;
+}
+
+/* ---------------------------- Couverture ------------------------------- */
+
+.cover {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border: 1px solid #d8e6e0;
+  border-radius: 8px;
+}
+
+.cover-pending {
+  display: inline-block;
+  background: #eef4f1;
+}

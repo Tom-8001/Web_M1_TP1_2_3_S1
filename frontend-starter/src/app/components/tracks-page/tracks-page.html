@@ -1,0 +1,269 @@
+<section>
+  <div class="hero">
+    <p class="eyebrow">MA BIBLIOTHÈQUE</p>
+    <h1>Backing tracks</h1>
+    <p>Importez, retrouvez et écoutez vos morceaux de travail.</p>
+  </div>
+
+  <div class="grid">
+    <!-- ============================ IMPORT ============================ -->
+    <article class="card">
+      <h2>Importer un morceau</h2>
+
+      <form (submit)="upload(); $event.preventDefault()" novalidate>
+        <label for="track-title">Titre</label>
+        <input
+          id="track-title"
+          type="text"
+          [formControl]="title"
+          [readonly]="uploading()"
+          placeholder="Nom du morceau (facultatif)"
+          autocomplete="off"
+        />
+
+        <label for="track-file">Fichier audio</label>
+        <input
+          #fileInput
+          id="track-file"
+          type="file"
+          accept=".mp3,.wav,.ogg,.m4a,audio/mpeg,audio/wav,audio/x-wav,audio/ogg,audio/mp4,audio/x-m4a"
+          (change)="choose($event)"
+          [disabled]="uploading()"
+          aria-describedby="track-file-help"
+        />
+        <small id="track-file-help" class="hint">
+          Formats acceptés : MP3, WAV, OGG, M4A — {{ maxSizeLabel }} maximum.
+        </small>
+
+        @if (selectedFile(); as file) {
+          <p class="file-info" role="status">
+            {{ file.name }} — {{ formatBytes(file.size) }}
+          </p>
+        }
+
+        @if (fileError(); as message) {
+          <p class="error" role="alert">{{ message }}</p>
+        }
+
+        <!-- Bonus TP2 : image de couverture, facultative et validée localement
+             avec les mêmes règles que le backend (4 formats, 2 Mo). -->
+        <label for="track-cover">Image de couverture (facultatif)</label>
+        <input
+          #coverInput
+          id="track-cover"
+          type="file"
+          accept=".jpg,.jpeg,.png,.webp,.gif,image/jpeg,image/png,image/webp,image/gif"
+          (change)="chooseCover($event)"
+          [disabled]="uploading()"
+          aria-describedby="track-cover-help"
+        />
+        <small id="track-cover-help" class="hint">
+          JPG, PNG, WEBP ou GIF — {{ maxCoverSizeLabel }} maximum.
+        </small>
+
+        @if (selectedCover(); as cover) {
+          <p class="file-info" role="status">
+            {{ cover.name }} — {{ formatBytes(cover.size) }}
+          </p>
+        }
+
+        @if (coverError(); as message) {
+          <p class="error" role="alert">{{ message }}</p>
+        }
+
+        @if (uploading()) {
+          <mat-progress-bar
+            mode="determinate"
+            [value]="uploadPercent()"
+            aria-label="Progression de l’envoi"
+          />
+          <p class="hint" role="status">Envoi en cours… {{ uploadPercent() }} %</p>
+        }
+
+        @if (uploadPhase() === 'success') {
+          <p class="success" role="status">
+            Morceau envoyé : la bibliothèque a été actualisée.
+          </p>
+        }
+
+        @if (uploadError(); as message) {
+          <p class="error" role="alert">{{ message }}</p>
+        }
+
+        <button type="submit" [disabled]="uploading() || !selectedFile()">
+          {{ uploading() ? 'Envoi… ' + uploadPercent() + ' %' : 'Envoyer' }}
+        </button>
+      </form>
+    </article>
+
+    <!-- ========================= BIBLIOTHÈQUE ============================ -->
+    <article class="card">
+      <div class="row">
+        <h2>Mes pistes</h2>
+        <button type="button" (click)="load()" [disabled]="loading()">
+          Actualiser
+        </button>
+      </div>
+
+      <!-- Bonus TP2 : le filtre est envoyé au serveur (?q=), qui filtre toute
+           la bibliothèque avant de paginer. Filtrer ici ne porterait que sur
+           les cinq pistes de la page affichée. -->
+      <div class="search">
+        <label for="track-search">Filtrer par titre</label>
+        <input
+          id="track-search"
+          type="search"
+          [formControl]="search"
+          placeholder="Rechercher un morceau…"
+          autocomplete="off"
+          [readonly]="loading()"
+          aria-describedby="track-search-help"
+        />
+        <small id="track-search-help" class="hint">
+          La recherche porte sur toute la bibliothèque, pas seulement sur la
+          page affichée.
+        </small>
+      </div>
+
+      @if (loading()) {
+        <p class="hint" role="status">Chargement des pistes…</p>
+      }
+
+      @if (error(); as message) {
+        <p class="error" role="alert">{{ message }}</p>
+      }
+
+      @if (audioError(); as message) {
+        <p class="error" role="alert">{{ message }}</p>
+      }
+
+      @if (audioUrl() && playingId()) {
+        <div class="player">
+          <p class="hint" role="status">Lecture en cours : {{ playingTitle() }}</p>
+          <!-- src est une URL blob: créée par le composant : elle porte donc
+               le JWT, contrairement à une URL /api/tracks/:id/audio qui ne
+               peut pas transmettre d'en-tête Authorization. -->
+          <audio
+            [src]="audioUrl()"
+            controls
+            autoplay
+            (error)="audioFailed()"
+          ></audio>
+          <button type="button" (click)="stop()">Arrêter la lecture</button>
+        </div>
+      }
+
+      <ul class="tracks">
+        @for (track of tracks(); track track.id) {
+          <li class="track-card">
+            <div class="track-head">
+              <!-- Bonus TP2 : la vignette vient d'un Blob obtenu avec le JWT,
+                   donc d'une URL blob: et non d'une URL /api/... -->
+              @if (covers()[track.id]; as coverUrl) {
+                <img
+                  class="cover"
+                  [src]="coverUrl"
+                  [alt]="'Couverture de ' + track.title"
+                />
+              } @else if (track.hasCover) {
+                <span
+                  class="cover cover-pending"
+                  aria-hidden="true"
+                  title="Couverture en cours de chargement"
+                ></span>
+              }
+              <b class="track-title">{{ track.title }}</b>
+              <span class="badge">{{ audioFormatLabel(track.mimeType) }}</span>
+            </div>
+
+            <p class="track-meta">
+              <span class="meta-name">{{ track.originalName }}</span>
+              <span>{{ formatBytes(track.size) }}</span>
+              <span>Ajouté le {{ formatDate(track.createdAt) }}</span>
+            </p>
+
+            <div class="track-actions">
+              <button
+                type="button"
+                (click)="play(track)"
+                [disabled]="audioLoadingId() === track.id || deletingId() === track.id"
+                [attr.aria-label]="'Lire ' + track.title"
+              >
+                @if (audioLoadingId() === track.id) {
+                  Chargement…
+                } @else if (playingId() === track.id) {
+                  Rejouer
+                } @else {
+                  Lire
+                }
+              </button>
+
+              @if (pendingDeleteId() === track.id) {
+                <span class="confirm" role="group" [attr.aria-label]="'Confirmer la suppression de ' + track.title">
+                  <button type="button" class="danger" (click)="confirmDelete(track)">
+                    Confirmer
+                  </button>
+                  <button type="button" (click)="cancelDelete()">Annuler</button>
+                </span>
+              } @else {
+                <button
+                  type="button"
+                  class="danger"
+                  (click)="askDelete(track)"
+                  [disabled]="deletingId() === track.id"
+                  [attr.aria-label]="'Supprimer ' + track.title"
+                >
+                  {{ deletingId() === track.id ? 'Suppression…' : 'Supprimer' }}
+                </button>
+              }
+            </div>
+          </li>
+        } @empty {
+          @if (!loading()) {
+            <li class="empty">
+              Aucune piste pour le moment. Importez un fichier audio pour
+              commencer.
+            </li>
+          }
+        }
+      </ul>
+
+      <!-- Pagination serveur : le composant Material ne connaît que le total
+           renvoyé par l'API, il ne découpe jamais un tableau local. -->
+      <mat-paginator
+        [length]="total()"
+        [pageIndex]="page() - 1"
+        [pageSize]="limit()"
+        [pageSizeOptions]="pageSizeOptions"
+        [showFirstLastButtons]="true"
+        (page)="onPage($event)"
+        aria-label="Pagination de la bibliothèque"
+      />
+
+      <div class="pager">
+        <button
+          type="button"
+          (click)="go(page() - 1)"
+          [disabled]="!hasPrevPage() || loading()"
+        >
+          Précédent
+        </button>
+        <span>Page {{ page() }} / {{ pages() }} — {{ total() }} morceau(x)</span>
+        <button
+          type="button"
+          (click)="go(page() + 1)"
+          [disabled]="!hasNextPage() || loading()"
+        >
+          Suivant
+        </button>
+      </div>
+
+      @if (query()) {
+        <p class="hint" role="status">
+          Filtre actif : « {{ query() }} » — {{ total() }} morceau(x)
+          correspondant(s).
+        </p>
+      }
+    </article>
+  </div>
+</section>
